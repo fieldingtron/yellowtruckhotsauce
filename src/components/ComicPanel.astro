@@ -1,0 +1,29 @@
+---
+interface Props {
+    imageUrl: string;
+    captions: string[];
+}
+
+const { imageUrl, captions } = Astro.props;
+---
+
+<div
+    class="comic-panel flex flex-col items-center gap-4 my-8 p-4 bg-slate-800 rounded-lg shadow-lg"
+>
+    <img
+        src={imageUrl}
+        alt="Comic Panel"
+        class="rounded-md max-w-full h-auto border-2 border-slate-700"
+        loading="lazy"
+    />
+
+    <div class="captions w-full max-w-prose space-y-2">
+        {
+            captions.map((caption, index) => (
+                <p class="text-lg text-slate-200 leading-relaxed font-serif bg-slate-900/50 p-2 rounded">
+                    {caption}
+                </p>
+            ))
+        }
+    </div>
+</div>

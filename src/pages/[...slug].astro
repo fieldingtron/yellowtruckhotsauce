@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ComicPanel from "../components/ComicPanel.astro";
+import { db, Stories, eq } from "astro:db";
+
+export async function getStaticPaths() {
+    const stories = await db.select().from(Stories);
+    return stories.map((story) => ({
+        params: { slug: story.slug },
+    }));
+}
+
+const { slug } = Astro.params;
+
+// Provide a fallback or error if slug is undefined (though getStaticPaths ensures it exists)
+if (!slug) {
+    return Astro.redirect("/404");
+}
+
+const result = await db.select().from(Stories).where(eq(Stories.slug, slug));
+const story = result[0];
+
+if (!story) {
+    return Astro.redirect("/404");
+}
+---
+
+<BaseLayout title={story.title}>
+    <article class="max-w-3xl mx-auto py-8">
+        <header class="mb-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-white">
+                {story.title}
+            </h1>
+            <p class="text-xl text-slate-400 italic">{story.summary}</p>
+        </header>
+
+        <div class="prose prose-invert prose-lg max-w-none mb-12">
+            <Fragment set:html={story.fullStory} />
+        </div>
+
+        {
+            story.comicImageUrl && (
+                <ComicPanel
+                    imageUrl={story.comicImageUrl}
+                    captions={story.typedCaptions as string[]}
+                />
+            )
+        }
+
+        <div class="mt-12 text-center">
+            <a
+                href="/"
+                class="text-yellow-500 hover:text-yellow-400 font-semibold underline underline-offset-4"
+            >
+                &larr; Back to Stories
+            </a>
+        </div>
+    </article>
+</BaseLayout>
