@@ -65,9 +65,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		const input = document.getElementById("secret-code");
 		const errorMessage = document.getElementById("error-message");
 
-		const REDIRECTS: Record<string, string> = {
+		const REDIRECTS = {
 			gonkerlives: "/gonkerlives",
 			cornhole: "/cornhole",
+			catpee: "/pauls",
 		};
 
 		form?.addEventListener("submit", (e) => {

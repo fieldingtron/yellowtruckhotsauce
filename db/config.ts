@@ -5,12 +5,20 @@ const Stories = defineTable({
     slug: column.text({ primaryKey: true }),
     title: column.text(),
     summary: column.text(),
+  }
+});
+
+const Panels = defineTable({
+  columns: {
+    id: column.number({ primaryKey: true }),
+    storySlug: column.text({ references: () => Stories.columns.slug }),
+    order: column.number(),
+    imageUrl: column.text(),
     fullStory: column.text(),
-    comicImageUrl: column.text(),
-    typedCaptions: column.json(),
+    typedCaptions: column.json({ optional: true }),
   }
 });
 
 export default defineDb({
-  tables: { Stories }
+  tables: { Stories, Panels }
 });

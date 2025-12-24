@@ -1,29 +1,36 @@
 ---
 interface Props {
     imageUrl: string;
-    captions: string[];
 }
 
-const { imageUrl, captions } = Astro.props;
+const { imageUrl } = Astro.props;
 ---
 
 <div
-    class="comic-panel flex flex-col items-center gap-4 my-8 p-4 bg-slate-800 rounded-lg shadow-lg"
+    class="comic-panel p-4 md:p-8 bg-slate-800/50 backdrop-blur-md rounded-2xl shadow-2xl border border-slate-700/50 relative overflow-hidden group h-screen w-full flex items-center justify-center"
 >
-    <img
-        src={imageUrl}
-        alt="Comic Panel"
-        class="rounded-md max-w-full h-auto border-2 border-slate-700"
-        loading="lazy"
-    />
+    <!-- Background glow -->
+    <div
+        class="absolute -top-24 -left-24 w-48 h-48 bg-yellow-500/10 rounded-full blur-3xl group-hover:bg-yellow-500/20 transition-colors duration-700"
+    >
+    </div>
 
-    <div class="captions w-full max-w-prose space-y-2">
-        {
-            captions.map((caption, index) => (
-                <p class="text-lg text-slate-200 leading-relaxed font-serif bg-slate-900/50 p-2 rounded">
-                    {caption}
-                </p>
-            ))
-        }
+    <div class="relative w-full h-full flex items-center justify-center">
+        <div
+            class="absolute -inset-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000"
+        >
+        </div>
+        <img
+            src={imageUrl}
+            alt="Comic Panel"
+            class="relative rounded-lg max-w-full max-h-full w-auto h-auto border-2 border-slate-950 shadow-inner object-contain shadow-2xl"
+            loading="lazy"
+        />
     </div>
 </div>
+
+<style>
+    .comic-panel {
+        font-family: "Bangers", cursive, "Courier New", Courier, monospace;
+    }
+</style>
