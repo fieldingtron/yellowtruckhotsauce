@@ -43,19 +43,49 @@ export default async function seed() {
 		{
 			storySlug: 'pauls',
 			order: 1,
-			imageUrl: '/pauls-lab.png',
-			fullStory: '<p>The man behind the wheel was only the beginning.</p>',
+			imageUrl: '/pauls_stressed.png',
+			fullStory: '<p>Professor Pauls was a man living on the edge of academic disaster.</p>',
 			typedCaptions: [
-				'Here is a story of professor Paul, Paul with an S, and the hot sauce.',
-				'The sad and bizarre story of Yellow Truck Hot Sauce.'
+				'At the University, they called him a failure.',
+				'He was an abused professor, buried under a mountain of grading and disappointment.',
+				'But he had a plan to make it rich... very rich.'
 			],
 		},
 		// Pauls - Panel 2
 		{
 			storySlug: 'pauls',
 			order: 2,
-			imageUrl: '/paul-delivery.png',
-			fullStory: '<p>The city streets were slick with rain and neon shadows. Paul gripped the wheel of the yellow truck, the precious cargo of liquid fire rattling in the back. The delivery could not wait.</p>',
+			imageUrl: '/pauls_son_working.png',
+			fullStory: '<p>The professor\'s son did all the actual labor, naturally.</p>',
+			typedCaptions: [
+				'Pauls demanded a hot sauce that would conquer the world.',
+				'While the professor reclined in his study, the son spent his nights in a sweltering basement kitchen.',
+				'"Must... finish... for Dad!" the boy whispered, wiping sweat from his brow.'
+			],
+		},
+		// Pauls - Panel 3
+		{
+			storySlug: 'pauls',
+			order: 3,
+			imageUrl: '/cats_peeing.png',
+			fullStory: '<p>The garden was a wild place at night, home to a fleet of stray cats.</p>',
+			typedCaptions: [
+				'One fateful evening, the son noticed something... unusual.',
+				'The neighborhood cats were marking their territory on the jalapeno patch.',
+				'The peppers were being saturated in an indescribable essence.'
+			],
+		},
+		// Pauls - Panel 4
+		{
+			storySlug: 'pauls',
+			order: 4,
+			imageUrl: '/pauls_sauce_revelation.png',
+			fullStory: '<p>The discovery changed the flavor profile forever.</p>',
+			typedCaptions: [
+				'The son tasted the new batch. It was shocking. It was revelatory.',
+				'The feline influence added a tang that defied all logic.',
+				'Yellow Truck Hot Sauce was no longer just a recipe. It was a phenomenon.'
+			],
 		}
 	]);
 }

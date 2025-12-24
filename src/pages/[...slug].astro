@@ -431,26 +431,30 @@ const prevUrl = hasPrevPanel ? `/${storySlug}/${panelOrder - 1}` : null;
         padding: 0 !important;
     }
 
-    .comic-caption {
-        background: #fde047; /* yellow-300 */
-        color: #020617; /* slate-950 */
-        padding: 1.25rem 1.75rem;
-        border: 4px solid #020617;
-        box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
-        position: relative;
-        font-family: "Bangers", cursive;
-        font-size: 2rem;
-        line-height: 1.1;
-        transform: scale(0);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        z-index: 20;
+    :global(.comic-caption) {
+        background: #fde047 !important; /* yellow-300 */
+        color: #020617 !important; /* slate-950 */
+        padding: 1.25rem 1.75rem !important;
+        border: 4px solid #020617 !important;
+        box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4) !important;
+        position: relative !important;
+        font-family: "Bangers", cursive !important;
+        font-size: 2rem !important;
+        line-height: 1.1 !important;
+        transform: scale(0) !important;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        z-index: 20 !important;
+        display: block !important;
+        margin-bottom: 1.5rem !important;
+        width: fit-content !important;
+        max-width: 100% !important;
     }
 
-    .comic-caption.popped {
-        transform: scale(1) rotate(var(--rotation));
+    :global(.comic-caption.popped) {
+        transform: scale(1) rotate(var(--rotation)) !important;
     }
 
-    .comic-caption::before {
+    :global(.comic-caption::before) {
         content: "";
         position: absolute;
         top: -4px;
@@ -461,7 +465,7 @@ const prevUrl = hasPrevPanel ? `/${storySlug}/${panelOrder - 1}` : null;
         pointer-events: none;
     }
 
-    .story-sentence {
+    :global(.story-sentence) {
         display: block;
         margin-bottom: 1.5rem;
     }
