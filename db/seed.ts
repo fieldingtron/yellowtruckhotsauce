@@ -194,7 +194,8 @@ export default async function seed() {
 			fullStory: 'Bea practices singing in a choir, focusing on building immense lung capacity.',
 			typedCaptions: [
 				'Sunday mornings were for choir practice.',
-				'Building the ultimate vocal range.'
+				'Building the ultimate vocal range.',
+				'But also she is developing a secret weapon.'
 			],
 		},
 		// Bea's Story - Panel 5
