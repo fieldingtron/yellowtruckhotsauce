@@ -1,0 +1,62 @@
+#!/bin/bash
+
+echo "🔍 Vertex AI Connection Diagnostics"
+echo "===================================="
+echo ""
+
+# Check if google-cloud.json exists
+if [ -f "google-cloud.json" ]; then
+    echo "✅ Service account file found: google-cloud.json"
+    PROJECT_ID=$(cat google-cloud.json | grep -o '"project_id": "[^"]*' | cut -d'"' -f4)
+    SERVICE_ACCOUNT=$(cat google-cloud.json | grep -o '"client_email": "[^"]*' | cut -d'"' -f4)
+    echo "   Project ID: $PROJECT_ID"
+    echo "   Service Account: $SERVICE_ACCOUNT"
+else
+    echo "❌ Service account file not found"
+    exit 1
+fi
+
+echo ""
+echo "📋 DIAGNOSIS:"
+echo "============"
+echo ""
+echo "The error indicates: Permission 'aiplatform.endpoints.predict' denied"
+echo ""
+echo "This means the service account needs the following:"
+echo ""
+echo "1️⃣  Vertex AI User role (roles/aiplatform.user)"
+echo "   OR"
+echo "   Vertex AI Service Agent role (roles/aiplatform.serviceAgent)"
+echo ""
+echo "2️⃣  The Vertex AI API must be enabled for the project"
+echo ""
+echo ""
+echo "📝 TO FIX THIS, run these commands in Google Cloud Console:"
+echo "==========================================================="
+echo ""
+echo "# Enable the Vertex AI API"
+echo "gcloud services enable aiplatform.googleapis.com --project=$PROJECT_ID"
+echo ""
+echo "# Grant the service account Vertex AI User permissions"
+echo "gcloud projects add-iam-policy-binding $PROJECT_ID \\"
+echo "    --member=\"serviceAccount:$SERVICE_ACCOUNT\" \\"
+echo "    --role=\"roles/aiplatform.user\""
+echo ""
+echo ""
+echo "🌐 OR use the Google Cloud Console web interface:"
+echo "================================================="
+echo ""
+echo "1. Go to: https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?project=$PROJECT_ID"
+echo "   - Click 'Enable' to enable Vertex AI API"
+echo ""
+echo "2. Go to: https://console.cloud.google.com/iam-admin/iam?project=$PROJECT_ID"
+echo "   - Find the service account: $SERVICE_ACCOUNT"
+echo "   - Click 'Edit principal' (pencil icon)"
+echo "   - Click 'Add another role'"
+echo "   - Search for and select: 'Vertex AI User'"
+echo "   - Click 'Save'"
+echo ""
+echo ""
+echo "⏱️  After making these changes, wait 1-2 minutes for permissions to propagate,"
+echo "   then run: npx tsx scripts/test-vertex.ts"
+echo ""
