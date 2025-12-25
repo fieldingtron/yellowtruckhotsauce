@@ -43,49 +43,95 @@ export default async function seed() {
 		{
 			storySlug: 'pauls',
 			order: 1,
-			imageUrl: '/pauls_stressed.png',
-			fullStory: '<p>Professor Pauls was a man living on the edge of academic disaster.</p>',
+			imageUrl: '/pauls_panel_1_bald.png',
+			fullStory: '<p>Between the yelling students, the protests, and the demands for better grades without work, Pauls knew it was time.</p>',
 			typedCaptions: [
-				'At the University, they called him a failure.',
-				'He was an abused professor, buried under a mountain of grading and disappointment.',
-				'But he had a plan to make it rich... very rich.'
+				'The classroom was in full revolt.',
+				'Between the yelling students, the protests, and the demands for better grades without work...',
+				'Pauls knew it was time.'
 			],
 		},
 		// Pauls - Panel 2
 		{
 			storySlug: 'pauls',
 			order: 2,
-			imageUrl: '/pauls_son_working.png',
-			fullStory: '<p>The professor\'s son did all the actual labor, naturally.</p>',
+			imageUrl: '/pauls_panel_2.png',
+			fullStory: '<p>While Phin spent his nights researching the ultimate recipe, Pauls watched with growing anticipation. They weren\'t just making sauce; they were building an empire.</p>',
 			typedCaptions: [
-				'Pauls demanded a hot sauce that would conquer the world.',
-				'While the professor reclined in his study, the son spent his nights in a sweltering basement kitchen.',
-				'"Must... finish... for Dad!" the boy whispered, wiping sweat from his brow.'
+				'Phin dove deep into the digital archives of spice.',
+				'Two cats, double the judgment.',
+				'The blueprint for Yellow Truck Hot Sauce was beginning to take shape.'
 			],
 		},
 		// Pauls - Panel 3
 		{
 			storySlug: 'pauls',
 			order: 3,
-			imageUrl: '/cats_peeing.png',
-			fullStory: '<p>The garden was a wild place at night, home to a fleet of stray cats.</p>',
+			imageUrl: '/pauls_panel_3.png',
+			fullStory: '<p>Batch #42 was a biological catastrophe. It smelled like burnt tires and disappointment, and the murky green color was actively discouraging.</p>',
 			typedCaptions: [
-				'One fateful evening, the son noticed something... unusual.',
-				'The neighborhood cats were marking their territory on the jalapeno patch.',
-				'The peppers were being saturated in an indescribable essence.'
+				'Batch #42 was a biological catastrophe.',
+				'It smelled like burnt tires and disappointment.',
+				'Even the cats were staging a kitchen walkout.'
 			],
 		},
 		// Pauls - Panel 4
 		{
 			storySlug: 'pauls',
 			order: 4,
-			imageUrl: '/pauls_sauce_revelation.png',
-			fullStory: '<p>The discovery changed the flavor profile forever.</p>',
+			imageUrl: '/pauls_panel_4.png',
+			fullStory: '<p>The university market testing was... aggressive. Students were running for fountains, steam literally pouring from their ears. Rejection was tasting a lot like murky green sludge.</p>',
 			typedCaptions: [
-				'The son tasted the new batch. It was shocking. It was revelatory.',
-				'The feline influence added a tang that defied all logic.',
-				'Yellow Truck Hot Sauce was no longer just a recipe. It was a phenomenon.'
+				'The market testing was... aggressive.',
+				'Student tasters were refusing to return for a second drop.',
+				'Professor Pauls was beginning to doubt the dream.'
 			],
-		}
+		},
+		// Pauls - Panel 5
+		{
+			storySlug: 'pauls',
+			order: 5,
+			imageUrl: '/pauls_panel_5.png',
+			fullStory: '<p>They were out of ideas and out of spirit. Late night turned into early morning as Phin collapsed into sleep, and Pauls watched the rain wash away their hopes.</p>',
+			typedCaptions: [
+				'They were out of ideas and out of spirit.',
+				'Even the cats could sense the heavy cloud of failure.',
+				'The dream of the perfect sauce was slipping away.'
+			],
+		},
+		// Pauls - Panel 6
+		{
+			storySlug: 'pauls',
+			order: 6,
+			imageUrl: '/pauls_panel_6.png',
+			fullStory: '<p>The cats decided to take pity on the pathetic humans. Under the cover of the full moon, a secret biological catalyst was added to the jalapeno patch, forever changing the DNA of the crop.</p>',
+			typedCaptions: [
+				'The cats decided to take pity on the pathetic humans.',
+				'A secret, biological catalyst was added under the full moon.',
+				'The intervention was... unconventional.'
+			],
+		},
+		// Pauls - Panel 7
+		{
+			storySlug: 'pauls',
+			order: 7,
+			imageUrl: '/pauls_panel_7.png',
+			fullStory: '<p>The morning harvest defied every law of botany. The peppers were practically vibrating with flavor, their vibrant orange-red glow promising something legendary.</p>',
+			typedCaptions: [
+				'The morning harvest defied every law of botany.',
+				'The peppers were practically vibrating with flavor.',
+				'Phin had never seen anything like it.'
+			],
+		},
+		// Pauls - Panel 8
+		{
+			storySlug: 'pauls',
+			order: 8,
+			imageUrl: '/pauls_panel_8.png',
+			fullStory: '<p>The new batch was more than hot—it was addictive, it was perfection, it was a culinary revelation. Yellow Truck Hot Sauce had finally arrived, and the world would never be the same.</p>',
+			typedCaptions: [
+				'TO BE CONTINUED...'
+			],
+		},
 	]);
 }

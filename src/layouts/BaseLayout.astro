@@ -4,9 +4,10 @@ import "../styles/global.css";
 interface Props {
   title: string;
   hideHeader?: boolean;
+  hideFooter?: boolean;
 }
 
-const { title, hideHeader = false } = Astro.props;
+const { title, hideHeader = false, hideFooter = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -42,8 +43,12 @@ const { title, hideHeader = false } = Astro.props;
     <main class="max-w-4xl mx-auto p-4">
       <slot />
     </main>
-    <footer class="p-8 text-center text-slate-500 text-sm">
-      &copy; {new Date().getFullYear()} Yellow Truck HotSauce
-    </footer>
+    {
+      !hideFooter && (
+        <footer class="p-8 text-center text-slate-500 text-sm">
+          &copy; {new Date().getFullYear()} Yellow Truck HotSauce
+        </footer>
+      )
+    }
   </body>
 </html>
