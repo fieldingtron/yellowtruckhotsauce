@@ -24,6 +24,11 @@ export default async function seed() {
 			slug: 'peyton',
 			title: 'Things No One Asked Them To Say',
 			summary: 'The accidental bestseller.',
+		},
+		{
+			slug: 'ian',
+			title: 'The Midnight Strays',
+			summary: 'The melody of a black cat.',
 		}
 	]);
 
@@ -422,6 +427,77 @@ export default async function seed() {
 				'Still dramatic. Still confused why they smell funny.',
 				'Still unknowingly paying her mortgage — twice.'
 			],
+		},
+		// Ian's Story - Panel 1
+		{
+			storySlug: 'ian',
+			order: 1,
+			imageUrl: '/ian_panel_1.jpg',
+			fullStory: '<p>Ian loves skating but wants to start a rock and roll band.</p>',
+			typedCaptions: ['Ian loves skating...', 'But he really wants to start a rock and roll band.'],
+		},
+		{
+			storySlug: 'ian',
+			order: 2,
+			imageUrl: '/ian_panel_2.jpg',
+			fullStory: '<p>But writing a hit song is harder than landing a kickflip.</p>',
+			typedCaptions: ['Writing a hit song is harder than landing a kickflip.', 'Ian’s bedroom was filled with the sounds of failure.'],
+		},
+		{
+			storySlug: 'ian',
+			order: 3,
+			imageUrl: '/ian_panel_3.jpg',
+			fullStory: '<p>Isabella never misses a chance to weigh in.</p>',
+			typedCaptions: ['Isabella never misses a chance to weigh in.', '“You can’t just invent rock greatness, Ian.”'],
+		},
+		{
+			storySlug: 'ian',
+			order: 4,
+			imageUrl: '/ian_panel_4.jpg',
+			fullStory: '<p>Then a strange visitor appeared at the window.</p>',
+			typedCaptions: ['Then a strange visitor appeared at the window.', 'A black cat with a look that said it knew something Ian didn’t.'],
+		},
+		{
+			storySlug: 'ian',
+			order: 5,
+			imageUrl: '/ian_panel_5.jpg',
+			fullStory: '<p>And suddenly, the music started to flow.</p>',
+			typedCaptions: ['Every time the cat meowed, the guitar sang.', 'It was like the amp was possessed by the blues.'],
+		},
+		{
+			storySlug: 'ian',
+			order: 6,
+			imageUrl: '/ian_panel_6.jpg',
+			fullStory: '<p>The whole crew was here for the first jam session.</p>',
+			typedCaptions: ['The cousins joined in, and the sound was incredible.', 'Bea on drums, Phin on bass, and Isa on the mic.'],
+		},
+		{
+			storySlug: 'ian',
+			order: 7,
+			imageUrl: '/ian_panel_7.jpg',
+			fullStory: '<p>Late night in the garage, the magic was real.</p>',
+			typedCaptions: ['Late night in the garage, the magic was real.', 'They finally found their sound.'],
+		},
+		{
+			storySlug: 'ian',
+			order: 8,
+			imageUrl: '/ian_panel_8.jpg',
+			fullStory: '<p>The neighborhood was starting to notice.</p>',
+			typedCaptions: ['The neighborhood was starting to notice.', '“Who’s playing? That’s actually good!”'],
+		},
+		{
+			storySlug: 'ian',
+			order: 9,
+			imageUrl: '/ian_panel_9.jpg',
+			fullStory: '<p>The Midnight Strays’ first show was legendary.</p>',
+			typedCaptions: ['Their first street concert was pure magic.', 'Lights, crowd, and one very special fan on the amp.'],
+		},
+		{
+			storySlug: 'ian',
+			order: 10,
+			imageUrl: '/ian_panel_10.jpg',
+			fullStory: '<p>A new band was born, with a little help from a friend.</p>',
+			typedCaptions: ['The Midnight Strays were officially born.', 'TO BE CONTINUED...'],
 		},
 	]);
 }
