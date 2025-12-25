@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+google-cloud.json
+public/nano-banana-results.html
+scripts/nano-banana.ts
