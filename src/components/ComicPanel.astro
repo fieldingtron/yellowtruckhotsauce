@@ -15,17 +15,32 @@ const { imageUrl } = Astro.props;
     >
     </div>
 
-    <div class="relative w-full h-full flex items-center justify-center">
+    <div
+        class="relative w-full h-full flex items-center justify-center max-w-[min(100%,80vh)] aspect-square"
+    >
         <div
             class="absolute -inset-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000"
         >
         </div>
-        <img
-            src={imageUrl}
-            alt="Comic Panel"
-            class="relative rounded-lg max-w-full max-h-full w-auto h-auto border-2 border-slate-950 shadow-inner object-contain shadow-2xl"
-            loading="lazy"
-        />
+        {
+            imageUrl.toLowerCase().endsWith(".mp4") ? (
+                <video
+                    src={imageUrl}
+                    class="relative rounded-lg w-full h-full border-2 border-slate-950 shadow-inner object-cover shadow-2xl mb-4"
+                    autoplay
+                    loop
+                    controls
+                    playsinline
+                />
+            ) : (
+                <img
+                    src={imageUrl}
+                    alt="Comic Panel"
+                    class="relative rounded-lg w-full h-full border-2 border-slate-950 shadow-inner object-cover shadow-2xl"
+                    loading="lazy"
+                />
+            )
+        }
     </div>
 </div>
 

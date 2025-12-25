@@ -9,6 +9,10 @@ const modelId = 'gemini-3-pro-image-preview';
 const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:streamGenerateContent`;
 
 function fileToPart(path, mimeType) {
+    if (!fs.existsSync(path)) {
+        console.warn(`Warning: File not found ${path}`);
+        return null;
+    }
     return {
         inlineData: {
             mimeType,
@@ -20,6 +24,7 @@ function fileToPart(path, mimeType) {
 const peytonRef1 = fileToPart('images/peyton.jpg', 'image/jpeg');
 const peytonRef2 = fileToPart('images/peyton2.jpg', 'image/jpeg');
 const catRef = fileToPart('images/blackcat.jpg', 'image/jpeg');
+const stevenCraigRef = fileToPart('images/stevenAndCraig.jpg', 'image/jpeg');
 
 const STORY_NAME = "Things No One Asked Them To Say";
 const PANELS = [
@@ -38,13 +43,13 @@ const PANELS = [
     {
         number: 3,
         title: "Enter Drama Incarnate",
-        prompt: "Two 50-year-old men, Steven and Craig, walk into Peyton's life. Steven (50) is wearing a stylish scarf and holding a tall iced coffee. Craig (50) is looking dramatic and expressive. They look like middle-aged men who have just moved in. Peyton is watching them from her porch, looking a bit overwhelmed. Digital comic book / cartoon art style.",
+        prompt: "Two 50-year-old men, Steven and Craig (use the stevenAndCraig.jpg reference), walk into Peyton's life. Steven (50) is wearing a stylish scarf and holding a tall iced coffee. Craig (50) is looking dramatic and expressive. They look like middle-aged men (around 50 years old) who have just moved in. Peyton is watching them from her porch, looking a bit overwhelmed. Digital comic book / cartoon art style.",
         filename: "peyton_panel_3.jpg"
     },
     {
         number: 4,
         title: "Complaint Olympics",
-        prompt: "Two 50-year-old men, Steven and Craig, are having a dramatic meltdown on their porch. Craig (50) is crying hysterically, pointing at the neighbor's house. Steven (50, wearing a scarf) is gasping in shock at a slightly crooked trash can. They are middle-aged men acting like toddlers. Peyton is in the background, looking exhausted and rubbing her temples. Digital comic book / cartoon art style.",
+        prompt: "Two 50-year-old men, Steven and Craig (stevenAndCraig.jpg), are having a dramatic meltdown on their porch. Craig (50) is crying hysterically, pointing at the neighbor's house. Steven (50, wearing a scarf) is gasping in shock at a slightly crooked trash can. They are middle-aged men acting like toddlers. Peyton is in the background, looking exhausted and rubbing her temples. Digital comic book / cartoon art style.",
         filename: "peyton_panel_4.jpg"
     },
     {
@@ -56,7 +61,7 @@ const PANELS = [
     {
         number: 6,
         title: "Confusion & Perfume",
-        prompt: "Steven (50) is sniffing a shirt from his laundry basket with a look of extreme horror and disgust. Next to him, Craig (50) is frantically spraying four different bottles of cologne into the air, creating a cloud of mist. Peyton is in the background with a subtle, knowing smirk. IMPORTANT: Peyton must look like the woman in the reference images (youthful/pretty). NO SPEECH BUBBLES OR TEXT BOXES. Digital comic book / cartoon art style.",
+        prompt: "Steven (50, stevenAndCraig.jpg) is sniffing a shirt from his laundry basket with a look of extreme horror and disgust. Next to him, Craig (50, stevenAndCraig.jpg) is frantically spraying four different bottles of cologne into the air, creating a cloud of mist. Peyton is in the background with a subtle, knowing smirk. IMPORTANT: Peyton must look like the woman in the reference images (youthful/pretty). NO SPEECH BUBBLES OR TEXT BOXES. Digital comic book / cartoon art style.",
         filename: "peyton_panel_6.jpg"
     },
     {
@@ -80,7 +85,7 @@ const PANELS = [
     {
         number: 10,
         title: "Poetic Justice",
-        prompt: "A large city billboard features a beautiful, realistic portrait of Peyton (based on her reference photos) with the text 'INTERNATIONAL HIT AUTHOR!'. On the street below, the two 50-year-old men, Steven and Craig, are walking past a laundry basket, looking confused. Peyton's cats are smirking from a nearby window. Near the bottom corner of the image, the text 'TO BE CONTINUED...' is written in a classic comic book style font. NO SPEECH BUBBLES. Digital comic book / cartoon art style.",
+        prompt: "A large city billboard features a beautiful, realistic portrait of Peyton (based on her reference photos) with the text 'INTERNATIONAL HIT AUTHOR!'. On the street below, the two 50-year-old men, Steven and Craig (stevenAndCraig.jpg), are walking past a laundry basket, looking confused. Peyton's cats are smirking from a nearby window. Near the bottom corner of the image, the text 'TO BE CONTINUED...' is written in a classic comic book style font. NO SPEECH BUBBLES. Digital comic book / cartoon art style.",
         filename: "peyton_panel_10.jpg"
     }
 ];
@@ -95,17 +100,20 @@ async function generatePanel(panelNumber) {
     console.log(`Generating Panel ${panelNumber}: ${panel.title}...`);
 
     const fullPrompt = {
-        text: `Based on the attached reference images of Peyton (the woman) and the black cat, generate the following comic panel in a consistent digital comic book / cartoon art style:
+        text: `Based on the attached reference images of Peyton (the woman), the black cat, and the two men (Steven and Craig), generate the following comic panel in a consistent digital comic book / cartoon art style:
 ${panel.prompt}
 
 Character Consistency:
 1. Peyton: Use the woman from peyton.jpg and peyton2.jpg (brownish hair, friendly face).
 2. The Cats: Use the black cat from blackcat.jpg (sleek black cat with yellow eyes).
-3. Style: Vibrant, clean lines, comic book aesthetic.` };
+3. Steven and Craig: Use the two men from stevenAndCraig.jpg. They are middle-aged men (around 50). One is Steven (often wears a scarf), one is Craig.
+4. Style: Vibrant, clean lines, comic book aesthetic.` };
+
+    const activeParts = [peytonRef1, peytonRef2, catRef, stevenCraigRef, fullPrompt].filter(p => p !== null);
 
     const payload = {
         contents: [
-            { role: 'user', parts: [peytonRef1, peytonRef2, catRef, fullPrompt] }
+            { role: 'user', parts: activeParts }
         ],
         generationConfig: {
             maxOutputTokens: 32768,
