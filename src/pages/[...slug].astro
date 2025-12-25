@@ -260,15 +260,35 @@ const prevUrl = hasPrevPanel ? `/${storySlug}/${panelOrder - 1}` : null;
             explicitCaptions = raw ? JSON.parse(raw) : [];
         } catch (e) {}
 
-        // Intelligent sentence splitting
-        const allSentences = fullContent
-            .split(/(?<=[.!?])\s+/)
-            .filter((s) => s.trim().length > 0);
+        // When explicit captions exist, render ONLY those as bubbles and DO NOT derive intro from fullStory.
+        // Otherwise, split fullStory into intro + remaining sentences for bubbles.
+        const normalize = (s: string) => s.replace(/\s+/g, " ").trim().toLowerCase();
+        let introText = "";
+        let actionSentences: string[] = [];
 
-        // Per user request: Title -> Brief Sentence -> Action Narrative (Bubbles)
-        // We take the first sentence as the "intro" and everything else as bubbles
-        const introText = allSentences.shift() || "";
-        const actionSentences = [...allSentences, ...explicitCaptions];
+        if (explicitCaptions.length > 0) {
+            // Use exactly the provided captions; keep their order; dedupe within list only.
+            const seen = new Set<string>();
+            actionSentences = explicitCaptions.filter((s) => {
+                const n = normalize(s);
+                if (!n || seen.has(n)) return false;
+                seen.add(n);
+                return true;
+            });
+        } else {
+            // Fallback to fullStory-derived intro + bubbles
+            const allSentences = fullContent
+                .split(/(?<=[.!?])\s+/)
+                .filter((s) => s.trim().length > 0);
+            introText = allSentences.shift() || "";
+            const seen = new Set<string>();
+            actionSentences = allSentences.filter((s) => {
+                const n = normalize(s);
+                if (!n || seen.has(n)) return false;
+                seen.add(n);
+                return true;
+            });
+        }
 
         // Update Intro
         introContainer.innerHTML = `<p>${introText}</p>`;

@@ -6,22 +6,12 @@ export default async function seed() {
 
 	await db.insert(Stories).values([
 		{
-			slug: 'gonkerlives',
-			title: 'Gonker Lives',
-			summary: 'The legend of the survivor.',
-		},
-		{
-			slug: 'cornhole',
-			title: 'Operation Cornhole',
-			summary: 'The mission that changed everything.',
-		},
-		{
 			slug: 'pauls',
 			title: 'Hot Sauce History',
 			summary: 'The man behind the wheel.',
 		},
 		{
-			slug: 'beas-story',
+			slug: 'bea',
 			title: "The Dragon's Roar",
 			summary: 'The champion of the river.',
 		},
@@ -38,22 +28,6 @@ export default async function seed() {
 	]);
 
 	await db.insert(Panels).values([
-		// Gonker Lives
-		{
-			storySlug: 'gonkerlives',
-			order: 1,
-			imageUrl: '/yellowtruck.jpg',
-			fullStory: '<p>Deep in the archives, the files were found. Gonker was never gone. He was just waiting for the right signal.</p>',
-			typedCaptions: ['Signal received.', ' The yellow truck arrives.', 'Gonker steps out.'],
-		},
-		// Operation Cornhole
-		{
-			storySlug: 'cornhole',
-			order: 1,
-			imageUrl: '/yellowtruck.jpg',
-			fullStory: '<p>It wasn\'t just a game. It was a test of skill, precision, and hot sauce tolerance.</p>',
-			typedCaptions: ['The target is set.', 'Bags in hand.', 'A perfect slide.'],
-		},
 		// Pauls - Panel 1
 		{
 			storySlug: 'pauls',
@@ -150,7 +124,7 @@ export default async function seed() {
 		},
 		// Bea's Story - Panel 1
 		{
-			storySlug: 'beas-story',
+			storySlug: 'bea',
 			order: 1,
 			imageUrl: '/beas_panel_1.jpg',
 			fullStory: '<p>At 15, Bea was already the undisputed queen of the river. Leading her dragon boat team wasn\'t just a sport; it was her domain.</p>',
@@ -161,7 +135,7 @@ export default async function seed() {
 		},
 		// Bea's Story - Panel 2
 		{
-			storySlug: 'beas-story',
+			storySlug: 'bea',
 			order: 2,
 			imageUrl: '/beas_panel_2.jpg',
 			fullStory: '<p>More than anything, Beatrix hated to lose. Her father, Pauls, had many failures in his lab. Bea saw them as tactical opportunities, especially the "experimental rejects" that were too volatile for human consumption.</p>',
@@ -173,7 +147,7 @@ export default async function seed() {
 		},
 		// Bea's Story - Panel 3
 		{
-			storySlug: 'beas-story',
+			storySlug: 'bea',
 			order: 3,
 			imageUrl: '/beas_panel_3.jpg',
 			fullStory: '<p>She was always the most charming competitor on the docks, offering "friendship samples" of her special blend. The rival teams never suspected the gut-wrenching surprise she had in store.</p>',
@@ -184,7 +158,7 @@ export default async function seed() {
 		},
 		// Bea's Story - Panel 4
 		{
-			storySlug: 'beas-story',
+			storySlug: 'bea',
 			order: 4,
 			imageUrl: '/beas_panel_4.jpg',
 			fullStory: '<p>Sunday mornings were for choir practice. Not just for the music, but to build the ultimate vocal range and lung capacity. Bea was training for more than just a hymn.</p>',
@@ -195,7 +169,7 @@ export default async function seed() {
 		},
 		// Bea's Story - Panel 5
 		{
-			storySlug: 'beas-story',
+			storySlug: 'bea',
 			order: 5,
 			imageUrl: '/beas_panel_5.jpg',
 			fullStory: '<p>Halfway through the championship, the competition began to crumble. The "reject" sauce was doing its dirty work, leaving rival rowers clutching their stomachs in agony.</p>',
@@ -206,7 +180,7 @@ export default async function seed() {
 		},
 		// Bea's Story - Panel 6
 		{
-			storySlug: 'beas-story',
+			storySlug: 'bea',
 			order: 6,
 			imageUrl: '/beas_panel_6.jpg',
 			fullStory: '<p>But one boat remained neck-and-neck. In the middle of the lake, far from the judges\' ears, Bea stood up. It was time for her secret weapon.</p>',
@@ -217,7 +191,7 @@ export default async function seed() {
 		},
 		// Bea's Story - Panel 7
 		{
-			storySlug: 'beas-story',
+			storySlug: 'bea',
 			order: 7,
 			imageUrl: '/beas_panel_7.jpg',
 			fullStory: '<p>She let out a roar that would make a dragon jealous. The sonic vibration was precise and devastating, splitting the rival boat apart like wet paper.</p>',
@@ -228,7 +202,7 @@ export default async function seed() {
 		},
 		// Bea's Story - Panel 8
 		{
-			storySlug: 'beas-story',
+			storySlug: 'bea',
 			order: 8,
 			imageUrl: '/beas_panel_8.jpg',
 			fullStory: '<p>Another year, another championship for Bea. Winning isn\'t just about strength; it\'s about technique and the right "supplements."</p>',

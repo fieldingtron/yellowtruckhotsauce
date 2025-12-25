@@ -38,7 +38,7 @@ const PANELS = [
     {
         number: 3,
         title: "Enter Drama Incarnate",
-        prompt: "Steven & Craig arrive dramatically. They are two men in their 30s. Steven is wearing a large scarf and holding an iced coffee with an 'attitude'. Craig is behind him. They have a 'poodle-energy' presence—high energy and dramatic. Peyton is looking on from her side of the porch. Digital comic book / cartoon art style.",
+        prompt: "Two 50-year-old men, Steven and Craig, walk into Peyton's life. Steven (50) is wearing a stylish scarf and holding a tall iced coffee. Craig (50) is looking dramatic and expressive. They look like middle-aged men who have just moved in. Peyton is watching them from her porch, looking a bit overwhelmed. Digital comic book / cartoon art style.",
         filename: "peyton_panel_3.jpg"
     },
     {
