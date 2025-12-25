@@ -29,6 +29,11 @@ export default async function seed() {
 			slug: 'ian',
 			title: 'The Midnight Strays',
 			summary: 'The melody of a black cat.',
+		},
+		{
+			slug: 'isa',
+			title: 'Isabella & The Sonic Carol',
+			summary: 'A holiday adventure with a high-pitched twist.',
 		}
 	]);
 
@@ -498,6 +503,91 @@ export default async function seed() {
 			imageUrl: '/ian_panel_10.jpg',
 			fullStory: '<p>A new band was born, with a little help from a friend.</p>',
 			typedCaptions: ['The Midnight Strays were officially born.', 'TO BE CONTINUED...'],
+		},
+		// Isabella's Story - Panel 1
+		{
+			storySlug: 'isa',
+			order: 1,
+			imageUrl: '/isa_panel_1.jpg',
+			fullStory: '<p>Isabella arrives for Christmas — fresh from shredding snow and ready for adventure.</p>',
+			typedCaptions: ['Isabella arrives for Christmas.', 'Fresh from shredding snow and ready for adventure.'],
+		},
+		{
+			storySlug: 'isa',
+			order: 2,
+			imageUrl: '/isa_panel_2.jpg',
+			fullStory: '<p>Holiday vibes: cocoa, jokes, and chaos brewing softly in the background.</p>',
+			typedCaptions: ['Holiday vibes: cocoa, jokes, and chaos.', 'Something’s brewing softly in the background.'],
+		},
+		{
+			storySlug: 'isa',
+			order: 3,
+			imageUrl: '/isa_panel_3.jpg',
+			fullStory: '<p>Tonight — they’re going caroling. Whether the neighborhood is ready or not.</p>',
+			typedCaptions: ['Tonight — they’re going caroling.', 'Whether the neighborhood is ready or not.'],
+		},
+		{
+			storySlug: 'isa',
+			order: 4,
+			imageUrl: '/isa_panel_4.jpg',
+			fullStory: '<p>Their voices? Questionable. Their spirit? Unstoppable.</p>',
+			typedCaptions: ['Their voices? Questionable.', 'Their spirit? Unstoppable.'],
+		},
+		{
+			storySlug: 'isa',
+			order: 5,
+			imageUrl: '/isa_panel_5.jpg',
+			fullStory: '<p>Last stop — the dreaded house of Steven and Craig.</p>',
+			typedCaptions: ['Last stop — the dreaded house of Steven and Craig.', 'The atmosphere was... gloomy.'],
+		},
+		{
+			storySlug: 'isa',
+			order: 6,
+			imageUrl: '/isa_panel_6.jpg',
+			fullStory: '<p>“Fa-la-la-la-la—”</p>',
+			typedCaptions: ['“Fa-la-la-la-la—”'],
+		},
+		{
+			storySlug: 'isa',
+			order: 7,
+			imageUrl: '/isa_panel_7.jpg',
+			fullStory: '<p>Festive spirit meets produce warfare.</p>',
+			typedCaptions: ['Festive spirit meets produce warfare.', '“Get off our property!”'],
+		},
+		{
+			storySlug: 'isa',
+			order: 8,
+			imageUrl: '/isa_panel_8.jpg',
+			fullStory: '<p>Isabella (serious): “Bea… use the Sonic Scream.”<br>Bea: “Finally.”</p>',
+			typedCaptions: ['“Bea… use the Sonic Scream.”', '“Finally.”'],
+		},
+		{
+			storySlug: 'isa',
+			order: 9,
+			imageUrl: '/isa_panel_9.jpg',
+			fullStory: '<p>Years of choir training finally pay off.</p>',
+			typedCaptions: ['Years of choir training finally pay off.', 'Windows shattered. Hearts trembled.'],
+		},
+		{
+			storySlug: 'isa',
+			order: 10,
+			imageUrl: '/isa_panel_10.jpg',
+			fullStory: '<p>Retreat! Retreat!<br>Craig: “Officers! The children are a menace!”</p>',
+			typedCaptions: ['Retreat! Retreat!', '“Officers! The children are a menace!”'],
+		},
+		{
+			storySlug: 'isa',
+			order: 11,
+			imageUrl: '/isa_panel_11.jpg',
+			fullStory: '<p>Payback — delivered by feline biological warfare.</p>',
+			typedCaptions: ['Payback — delivered by feline biological warfare.', 'Landscaping: Brown. Honor: Restored.'],
+		},
+		{
+			storySlug: 'isa',
+			order: 12,
+			imageUrl: '/isa_panel_12.jpg',
+			fullStory: '<p>Peace on Earth, goodwill to kids — after a little chaos.</p>',
+			typedCaptions: ['Peace on Earth, goodwill to kids.', 'Merry Christmas.'],
 		},
 	]);
 }

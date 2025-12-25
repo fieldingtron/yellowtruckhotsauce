@@ -1,0 +1,5 @@
+# Restrict crawlers to homepage only
+User-agent: *
+Disallow: /
+Allow: /$
+Allow: /index.html

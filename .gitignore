@@ -33,3 +33,4 @@ scripts/init-peyton-sheet.ts
 scripts/sync-from-sheets.ts
 scripts/push-to-sheets.ts
 scripts/generate-ian.mjs
+scripts/generate-isa.mjs
