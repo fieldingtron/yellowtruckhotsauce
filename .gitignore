@@ -25,3 +25,7 @@ pnpm-debug.log*
 google-cloud.json
 public/nano-banana-results.html
 scripts/nano-banana.ts
+token.mjs
+newtoken.mjs
+scripts/debug-sheets.ts
+scripts/sync-peyton-from-sheets.ts

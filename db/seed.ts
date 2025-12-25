@@ -29,6 +29,11 @@ export default async function seed() {
 			slug: 'phin',
 			title: 'The Boss',
 			summary: 'The master of creation.',
+		},
+		{
+			slug: 'peyton',
+			title: 'Things No One Asked Them To Say',
+			summary: 'The accidental bestseller.',
 		}
 	]);
 
@@ -340,6 +345,108 @@ export default async function seed() {
 			typedCaptions: [
 				'Cornered, Pauls surrenders.',
 				'Phin gains power — not just WiFi, but the keys to the empire.'
+			],
+		},
+		// Peyton's Story - Panel 1
+		{
+			storySlug: 'peyton',
+			order: 1,
+			imageUrl: '/peyton_panel_1.jpg',
+			fullStory: '<p>Peyton wanted to write a classic. All she had was caffeine and panic.</p>',
+			typedCaptions: [
+				'Peyton wanted to write a classic.',
+				'All she had was caffeine and panic.'
+			],
+		},
+		{
+			storySlug: 'peyton',
+			order: 2,
+			imageUrl: '/peyton_panel_2.jpg',
+			fullStory: '<p>Bills don’t wait for inspiration. So she rented out the other half of her duplex.</p>',
+			typedCaptions: [
+				'Bills don’t wait for inspiration.',
+				'So she rented out the other half of her duplex.'
+			],
+		},
+		{
+			storySlug: 'peyton',
+			order: 3,
+			imageUrl: '/peyton_panel_3.jpg',
+			fullStory: '<p>Steven and Craig moved in. Bold. Loud. Dramatic. Unfiltered.</p>',
+			typedCaptions: [
+				'Steven and Craig moved in.',
+				'Bold. Loud. Dramatic. Unfiltered.'
+			],
+		},
+		{
+			storySlug: 'peyton',
+			order: 4,
+			imageUrl: '/peyton_panel_4.jpg',
+			fullStory: '<p>Every day: a new crisis. None of them real.</p>',
+			typedCaptions: [
+				'Every day: a new crisis.',
+				'None of them real.'
+			],
+		},
+		{
+			storySlug: 'peyton',
+			order: 5,
+			imageUrl: '/peyton_panel_5.jpg',
+			fullStory: '<p>Her cats adored Steven’s laundry basket. Possibly too much.</p>',
+			typedCaptions: [
+				'Her cats adored Steven’s laundry basket.',
+				'Possibly too much.'
+			],
+		},
+		{
+			storySlug: 'peyton',
+			order: 6,
+			imageUrl: '/peyton_panel_6.jpg',
+			fullStory: '<p>They never figured it out. Cat-pee mystery season: ongoing.</p>',
+			typedCaptions: [
+				'They never figured it out.',
+				'Cat-pee mystery season: ongoing.'
+			],
+		},
+		{
+			storySlug: 'peyton',
+			order: 7,
+			imageUrl: '/peyton_panel_7.jpg',
+			fullStory: '<p>Her brother said, “You should publish this.” She didn’t hesitate.</p>',
+			typedCaptions: [
+				'Her brother said, “You should publish this.”',
+				'She didn’t hesitate.'
+			],
+		},
+		{
+			storySlug: 'peyton',
+			order: 8,
+			imageUrl: '/peyton_panel_8.jpg',
+			fullStory: '<p>So she made a book of their stupidest phrases. Anonymous. Completely untraceable.</p>',
+			typedCaptions: [
+				'So she made a book of their stupidest phrases.',
+				'Anonymous. Completely untraceable.'
+			],
+		},
+		{
+			storySlug: 'peyton',
+			order: 9,
+			imageUrl: '/peyton_panel_9.jpg',
+			fullStory: '<p>It blew up. Apparently, nonsense is delightful.</p>',
+			typedCaptions: [
+				'It blew up.',
+				'Apparently, nonsense is delightful.'
+			],
+		},
+		{
+			storySlug: 'peyton',
+			order: 10,
+			imageUrl: '/peyton_panel_10.jpg',
+			fullStory: '<p>Steven & Craig still complain. Still dramatic. Still confused why they smell funny. Still unknowingly paying her mortgage — twice.</p>',
+			typedCaptions: [
+				'Steven & Craig still complain.',
+				'Still dramatic. Still confused why they smell funny.',
+				'Still unknowingly paying her mortgage — twice.'
 			],
 		},
 	]);

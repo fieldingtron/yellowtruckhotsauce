@@ -17,6 +17,7 @@
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.4",
     "dotenv": "^17.2.3",
+    "googleapis": "^169.0.0",
     "openai": "^6.15.0",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.17",
