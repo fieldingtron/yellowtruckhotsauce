@@ -16,6 +16,7 @@ const Panels = defineTable({
     imageUrl: column.text(),
     fullStory: column.text(),
     typedCaptions: column.json({ optional: true }),
+    imagePrompt: column.text({ optional: true }),
   }
 });
 

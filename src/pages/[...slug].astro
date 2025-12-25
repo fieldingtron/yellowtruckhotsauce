@@ -149,13 +149,6 @@ const prevUrl = hasPrevPanel ? `/${storySlug}/${panelOrder - 1}` : null;
                     </header>
 
                     <div
-                        id="story-intro"
-                        class="hidden prose prose-invert prose-xl opacity-60 italic font-serif leading-relaxed"
-                    >
-                        <Fragment set:html={panel.fullStory} />
-                    </div>
-
-                    <div
                         id="story-bubbles"
                         class="flex flex-col gap-6 max-w-none pb-12"
                         data-captions={JSON.stringify(
@@ -230,18 +223,10 @@ const prevUrl = hasPrevPanel ? `/${storySlug}/${panelOrder - 1}` : null;
     let textTimeouts: number[] = [];
     const initStorySequencer = () => {
         const bubbleContainer = document.getElementById("story-bubbles");
-        const introContainer = document.getElementById("story-intro");
         const footer = document.getElementById("story-footer");
         const button = document.getElementById("continue-button");
 
-        if (
-            !bubbleContainer ||
-            !innerSidebar() ||
-            !footer ||
-            !button ||
-            !introContainer
-        )
-            return;
+        if (!bubbleContainer || !innerSidebar() || !footer || !button) return;
 
         // Cleanup
         textTimeouts.forEach(clearTimeout);
@@ -252,18 +237,15 @@ const prevUrl = hasPrevPanel ? `/${storySlug}/${panelOrder - 1}` : null;
         button.classList.add("pointer-events-none");
         bubbleContainer.innerHTML = "";
 
-        // Get full text from intro container and explicit captions
-        const fullContent = introContainer.textContent || "";
+        // Get explicit captions
         let explicitCaptions: string[] = [];
         try {
             const raw = bubbleContainer.getAttribute("data-captions");
             explicitCaptions = raw ? JSON.parse(raw) : [];
         } catch (e) {}
 
-        // When explicit captions exist, render ONLY those as bubbles and DO NOT derive intro from fullStory.
-        // Otherwise, split fullStory into intro + remaining sentences for bubbles.
-        const normalize = (s: string) => s.replace(/\s+/g, " ").trim().toLowerCase();
-        let introText = "";
+        const normalize = (s: string) =>
+            s.replace(/\s+/g, " ").trim().toLowerCase();
         let actionSentences: string[] = [];
 
         if (explicitCaptions.length > 0) {
@@ -275,23 +257,7 @@ const prevUrl = hasPrevPanel ? `/${storySlug}/${panelOrder - 1}` : null;
                 seen.add(n);
                 return true;
             });
-        } else {
-            // Fallback to fullStory-derived intro + bubbles
-            const allSentences = fullContent
-                .split(/(?<=[.!?])\s+/)
-                .filter((s) => s.trim().length > 0);
-            introText = allSentences.shift() || "";
-            const seen = new Set<string>();
-            actionSentences = allSentences.filter((s) => {
-                const n = normalize(s);
-                if (!n || seen.has(n)) return false;
-                seen.add(n);
-                return true;
-            });
         }
-
-        // Update Intro
-        introContainer.innerHTML = `<p>${introText}</p>`;
 
         const bubbleElements: HTMLElement[] = [];
         actionSentences.forEach((sentence) => {
@@ -325,22 +291,23 @@ const prevUrl = hasPrevPanel ? `/${storySlug}/${panelOrder - 1}` : null;
         bubbleElements.forEach((bubble, index) => {
             const timeout = setTimeout(() => {
                 bubble.classList.add("popped");
-                
+
                 // Auto-scroll on desktop to show the new bubble
                 if (window.innerWidth >= 1024) {
-                    const scrollContainer = document.getElementById("sidebar-scroll");
+                    const scrollContainer =
+                        document.getElementById("sidebar-scroll");
                     if (scrollContainer) {
                         // Smooth scroll to bring the bubble into view
                         setTimeout(() => {
-                            bubble.scrollIntoView({ 
-                                behavior: 'smooth', 
-                                block: 'center',
-                                inline: 'nearest'
+                            bubble.scrollIntoView({
+                                behavior: "smooth",
+                                block: "center",
+                                inline: "nearest",
                             });
                         }, 100);
                     }
                 }
-                
+
                 if (index === bubbleElements.length - 1) {
                     const finishTimeout = setTimeout(
                         showFinish,
