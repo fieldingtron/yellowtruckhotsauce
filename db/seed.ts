@@ -49,6 +49,11 @@ export default async function seed() {
 			slug: 'ruta',
 			title: 'Pauls the Story Seller & Ruta the Latvian Sudoku Mom',
 			summary: 'A story of puzzles, publishing, and the power of a space monkey.',
+		},
+		{
+			slug: 'fields',
+			title: 'GIGO & The Treasure Machine',
+			summary: 'The grand fusion of Garbage In, Garbage Out and One man’s trash is another man’s treasure.',
 		}
 	]);
 
@@ -930,6 +935,122 @@ export default async function seed() {
 				'Together — they build stories piece by piece, mile by mile.'
 			],
 			imagePrompt: "Wide shot. Ruta (ruta2.jpg, younger) fills in the last square. Pauls (age 10, NORMAL BROWN HAIR) finished his story. They share a knowing, proud smile. NO SPEECH BUBBLES. "
+		},
+		// Fields - Panel 1
+		{
+			storySlug: 'fields',
+			order: 1,
+			imageUrl: '/fields_panel_1.jpg',
+			fullStory: 'Fields was a programmer. A good one. Maybe too good.',
+			typedCaptions: [
+				'Fields was a programmer.',
+				'A good one.',
+				'Maybe too good.'
+			],
+			imagePrompt: "Fields (fields.jpg, depict him with less hair, noticeably balding, wearing a casual shirt with 'ROGUE RIVER' written on it) sits in a dark room illuminated by the glow of three large computer monitors. Peyton (peyton2.jpg) and Pauls (pauls.jpg, age 40, CLEAN-SHAVEN, NO BEARD, COMPLETELY BALD) are peeking over his shoulders, looking starstruck. NO SPEECH BUBBLES. "
+		},
+		// Fields - Panel 2
+		{
+			storySlug: 'fields',
+			order: 2,
+			imageUrl: '/fields_panel_2.jpg',
+			fullStory: 'Computers don’t care — feed them trash, they output trash.',
+			typedCaptions: [
+				'Fields: “Computers don’t care — feed them trash, they output trash.”',
+				'Pauls: “And we get rich… how?”'
+			],
+			imagePrompt: "Fields (fields.jpg, balding hair, wearing his 'ROGUE RIVER' shirt) stands in front of a whiteboard holding a marker. On the whiteboard: 'GIGO = Garbage In -> Garbage Out'. Both Peyton (peyton2.jpg) and Pauls (pauls.jpg, age 40, CLEAN-SHAVEN, NO BEARD, COMPLETELY BALD) are standing together, listening intently. Peyton looks confused, while Pauls looks ambitious. NO SPEECH BUBBLES. "
+		},
+		// Fields - Panel 3
+		{
+			storySlug: 'fields',
+			order: 3,
+			imageUrl: '/fields_panel_3.jpg',
+			fullStory: 'Then Fields broke the rules of capitalism itself: One Man’s Trash is Another Man’s Treasure.',
+			typedCaptions: [
+				'Fields: “Unless… you market the garbage as treasure.”',
+				'Peyton discovered gold.'
+			],
+			imagePrompt: "Fields (fields.jpg, balding, 'ROGUE RIVER' shirt) flips the whiteboard. The other side says: 'One Man’s Trash is Another Man’s Treasure'. Peyton (peyton2.jpg) gasps in realization. Pauls (pauls.jpg, age 40, CLEAN-SHAVEN, NO BEARD, COMPLETELY BALD) watches intently. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'fields',
+			order: 4,
+			imageUrl: '/fields_panel_4.jpg',
+			fullStory: 'Old stories are free. Public domain. Legal. Ripe.',
+			typedCaptions: [
+				'Fields: “Old stories are free. Public domain. Legal. Ripe.”',
+				'Pauls: “So we… steal them?”',
+				'Fields: “NO. We repackage creatively.”'
+			],
+			imagePrompt: "Inside a library. Fields (fields.jpg, balding, 'ROGUE RIVER' shirt) holds a scanner over a pile of old, dusty classic books. Pauls (pauls.jpg, age 40, CLEAN-SHAVEN, NO BEARD, COMPLETELY BALD) is watching with a curious expression. NO TEXT except on the books. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'fields',
+			order: 5,
+			imageUrl: '/fields_panel_5.jpg',
+			fullStory: 'GIGO in. Treasure out.',
+			typedCaptions: [
+				'GIGO in.',
+				'Treasure out.'
+			],
+			imagePrompt: "Fields (fields.jpg, balding, 'ROGUE RIVER' shirt) is typing rapidly. Peyton (peyton2.jpg) is feeding a paper shredder. Pauls (pauls.jpg, age 40, CLEAN-SHAVEN, NO BEARD, COMPLETELY BALD) adds emoji stickers. The computer is sparking with energy. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'fields',
+			order: 6,
+			imageUrl: '/fields_panel_6.jpg',
+			fullStory: 'Output: Literary “Genius”. Pauls thought it was awful. Fields told him to watch.',
+			typedCaptions: [
+				'Pauls: “This is… awful.”',
+				'Fields: “Exactly. Now watch.”'
+			],
+			imagePrompt: "Printer ejecting books with glossy covers. Fields (fields.jpg, balding, 'ROGUE RIVER' shirt) catches them. Titles: 'Dracula vs The Kraken', 'Sherlock Holmes & The Space Monkey'. Peyton (peyton2.jpg) and Pauls (pauls.jpg, age 40, CLEAN-SHAVEN, NO BEARD, COMPLETELY BALD) stare in disbelief. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'fields',
+			order: 7,
+			imageUrl: '/fields_panel_7.jpg',
+			fullStory: 'The internet loves chaos disguised as brilliance.',
+			typedCaptions: [
+				'The internet loves chaos disguised as brilliance.'
+			],
+			imagePrompt: "Fields (fields.jpg, balding, 'ROGUE RIVER' shirt) and Peyton (peyton2.jpg) look at a laptop showing a flashy storefront. Pauls (pauls.jpg, age 40, CLEAN-SHAVEN, NO BEARD, COMPLETELY BALD) is typing. Best Seller badges in background. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'fields',
+			order: 8,
+			imageUrl: '/fields_panel_8.jpg',
+			fullStory: 'Viral sensation. Orders explode on screen.',
+			typedCaptions: [
+				'“This book is so bad it’s art!”',
+				'“10/10 masterpiece — changed my life.”'
+			],
+			imagePrompt: "Split screen. Fields (fields.jpg, balding, 'ROGUE RIVER' shirt) watches a sales graph rocket upward. Reader holding a book looking shocked but delighted. Peyton and Pauls (pauls.jpg, age 40, CLEAN-SHAVEN, NO BEARD, COMPLETELY BALD) high-fiving. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'fields',
+			order: 9,
+			imageUrl: '/fields_panel_9.jpg',
+			fullStory: 'Rich & Slightly Famous. Welcome to the Trash-to-Treasure Economy.',
+			typedCaptions: [
+				'Pauls: “We’re authors now!”',
+				'Peyton: “And influencers!”',
+				'Fields: “Welcome to the Trash-to-Treasure Economy.”'
+			],
+			imagePrompt: "Celebration party scene. Peyton (peyton2.jpg) and Pauls (pauls.jpg, age 40, CLEAN-SHAVEN, NO BEARD, COMPLETELY BALD) throw gold confetti. Fields (fields.jpg, balding, 'ROGUE RIVER' shirt) leans back with coffee, smirking satisfied. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'fields',
+			order: 10,
+			imageUrl: '/fields_panel_10.jpg',
+			fullStory: 'Who says literature is dead? With AI… even trash becomes treasure.',
+			typedCaptions: [
+				'She solves numbers. He solves words.',
+				'Together — they build stories piece by piece, mile by mile.',
+				'Merry Christmas everyone!'
+			],
+			imagePrompt: "Cozy living room with a Christmas tree. Everyone celebrating and opening presents: Fields (fields.jpg, balding, 'ROGUE RIVER' shirt), Peyton (peyton2.jpg), Pauls (pauls.jpg, age 40, CLEAN-SHAVEN, NO BEARD, COMPLETELY BALD), John (john.jpg), Virginia (ginny.jpg), Ruta (ruta2.jpg), Ian (ian.jpg), Isabella (isa.jpg), Phin (phin.jpg), and Bea (bea.jpg). 'MERRY XMAS' sign on the wall. Warm festive glow. NO SPEECH BUBBLES. "
 		}
 	]);
 }
