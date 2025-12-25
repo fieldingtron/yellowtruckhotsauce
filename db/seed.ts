@@ -243,88 +243,103 @@ export default async function seed() {
 				'No school on time = No internet.'
 			],
 		},
-		// Phin's Story - Panel 2: The Biological Hack
+		// Phin's Story - Panel 2: Grounded From The Grid
 		{
 			storySlug: 'phin',
 			order: 2,
-			imageUrl: '/phin_panel_2.jpg',
-			fullStory: '<p>Phin discovers that the specific pH level of cat... "donations"... creates a mutation in the peppers. He also sneaks a few "calming" drops into his parents\' morning coffee.</p>',
+			imageUrl: '/phin_panel_2_grounded.jpg',
+			fullStory: '<p>Study door shut tight. Sign: “HOT SAUCE R&D — DO NOT ENTER.” Professor inserting Wi-Fi router into a safe like it’s radioactive. Phin watches, betrayed and furious.</p>',
 			typedCaptions: [
-				'Phin is in the backyard at night with a thermal-imaging monocle.',
-				'He\'s using a high-pitched whistle to command a small army of neighborhood cats.',
-				'Target: his dad’s failing jalapeño patch.'
+				'No WiFi. No gaming. No freedom.',
+				'Phin swears quietly: He’ll get it back… one way or another.'
 			],
 		},
-		// Phin's Story - Panel 3: The Golden Harvest
+		// Phin's Story - Panel 3: The Bitter Garden
 		{
 			storySlug: 'phin',
 			order: 3,
-			imageUrl: '/phin_panel_3.jpg',
-			fullStory: '<p>The crop is a miracle. The parents are strangely relaxed and happy (thanks to the coffee), and the Father’s new "Cat-Hacked Sauce" becomes an overnight global sensation.</p>',
+			imageUrl: '/phin_panel_3_garden.jpg',
+			fullStory: '<p>Backyard pepper patch. Plants small, wilted, pathetic. Professor kneels with soil test kit, frowning at results. Phin peers through window, realizing his father is desperate.</p>',
 			typedCaptions: [
-				'The jalapeño plants have exploded into massive, glowing red fruits.',
-				'The Father is in the garden, looking at a pepper with tears of joy.',
-				'A black cat with a bowtie watches him from a branch.'
+				'The professor’s boutique sauce dream is failing.',
+				'The peppers won’t grow… and time is running out.'
 			],
 		},
-		// Phin's Story - Panel 4: The Empire Rises
+		// Phin's Story - Panel 4: Night Research
 		{
 			storySlug: 'phin',
 			order: 4,
-			imageUrl: '/phin_panel_4.jpg',
-			fullStory: '<p>The Father is rich but remains stubborn about the "No Internet" rule as a matter of principle.</p>',
+			imageUrl: '/phin_panel_4_research.jpg',
+			fullStory: '<p>Phin sneaking into the yard at night with flashlight & DIY thermal monocle made from goggles and duct tape. Two black cats watch from fence with alien awareness.</p>',
 			typedCaptions: [
-				'Paul is on the cover of "Spice Weekly".',
-				'Boxes of "Professor’s Secret Sauce" are stacked to the ceiling.',
-				'Wealthy now, but he still won’t give Phin the WiFi password.'
+				'Grounded and bored, Phin wanders outside.',
+				'Curiosity blooms — something strange hums under the soil.'
 			],
 		},
-		// Phin's Story - Panel 5: The Strike Begins
+		// Phin's Story - Panel 5: The Accident
 		{
 			storySlug: 'phin',
 			order: 5,
-			imageUrl: '/phin_panel_5.jpg',
-			fullStory: '<p>Phin initiates a "Biological Strike." Without his feline "coders," the secret ingredient disappears, and the sauce quality plummets.</p>',
+			imageUrl: '/phin_panel_5_accident.jpg',
+			fullStory: '<p>Cats casually peeing at base of pepper stems. Soil glows faint neon and steam rises. Phin freezes mid-step — stunned realization moment.</p>',
 			typedCaptions: [
-				'The cats are sitting on the garden fence, refusing to enter.',
-				'Phin is standing in the garden with a sign: "NO BYTES, NO BITES."',
-				'The jalapeño plants are already starting to wither and turn grey.'
+				'He doesn’t invent the miracle — he witnesses it.',
+				'Cat urine… interacts with the peppers.'
 			],
 		},
-		// Phin's Story - Panel 6: The Extortion Note
+		// Phin's Story - Panel 6: The Cat Choir Project
 		{
 			storySlug: 'phin',
 			order: 6,
-			imageUrl: '/phin_panel_6.jpg',
-			fullStory: '<p>Phin moves from mischief to full-blown corporate extortion. The Father realizes his empire depends entirely on his son’s "stinky" secret.</p>',
+			imageUrl: '/phin_panel_6_choir.jpg',
+			fullStory: '<p>Backyard training setup. Phin with whistle, whiteboard diagrams, cat treats as incentives. Cats arranged like soldiers or lab subjects — eerie compliance.</p>',
 			typedCaptions: [
-				'The Father looks horrified at a plummeting stock chart.',
-				'On his desk is a physical "Ransom Note" made of cut-out magazine letters.',
-				'"RESTORE THE FIBER OPTICS OR THE SAUCE DIES. THE CATS WANT TREATS. I WANT GIGABITS."'
+				'Phin conducts experiments. The cats follow orders.',
+				'Something in their eyes suggests they understand too much.'
 			],
 		},
-		// Phin's Story - Panel 7: The Total Surrender
+		// Phin's Story - Panel 7: The Harvest
 		{
 			storySlug: 'phin',
 			order: 7,
-			imageUrl: '/phin_panel_7.jpg',
-			fullStory: '<p>The Father begs for forgiveness. He promises never to throttle the speed or set a bedtime again, as long as the cats return to the garden.</p>',
+			imageUrl: '/phin_panel_7_harvest.jpg',
+			fullStory: '<p>Rows of oversized glowing peppers — deep red with faint bio-luminescent veins. Professor drop-to-knees, overwhelmed. One black cat sits beside him like a witness.</p>',
 			typedCaptions: [
-				'The Father is on his knees, crying and holding a golden router like a trophy.',
-				'He is handing Phin a signed "Lifetime Internet Contract."',
-				'Phin is sitting in a high-tech gaming chair, looking like a young villain.'
+				'A miracle crop erupts overnight.',
+				'Pauls believes it\'s luck — Phin says nothing.'
 			],
 		},
-		// Phin's Story - Panel 8: The New Status Quo
+		// Phin's Story - Panel 8: The Empire Wakes
 		{
 			storySlug: 'phin',
 			order: 8,
-			imageUrl: '/phin_panel_8.jpg',
-			fullStory: '<p>Phin is now the shadow CEO of the hot sauce empire. He gets to school whenever he wants, and the internet connection is the fastest in the country.</p>',
+			imageUrl: '/phin_panel_8_empire.jpg',
+			fullStory: '<p>Magazine cover: “THE SAUCE KING!” Factory line bottling glowing sauce. News drones hover overhead. Phin stands in shadows behind success photos.</p>',
 			typedCaptions: [
-				'Phin is surrounded by 6 monitors, hacking with lightning speed.',
-				'The Father is happily packing hot sauce in the background.',
-				'A cat is sitting on Phin\'s shoulder.'
+				'The sauce spreads worldwide.',
+				'But Professor won’t return the WiFi — principle over progress.'
+			],
+		},
+		// Phin's Story - Panel 9: Biological Strike
+		{
+			storySlug: 'phin',
+			order: 9,
+			imageUrl: '/phin_panel_9_strike.jpg',
+			fullStory: '<p>Garden now guarded by cats holding tiny union-style picket signs. Phin stands defiantly with banner: NO BYTES = NO BITES. Peppers drying and greying behind him.</p>',
+			typedCaptions: [
+				'Phin withdraws the feline workforce.',
+				'The sauce pipeline collapses within days.'
+			],
+		},
+		// Phin's Story - Panel 10: The Router Treaty
+		{
+			storySlug: 'phin',
+			order: 10,
+			imageUrl: '/phin_panel_10_treaty.jpg',
+			fullStory: '<p>In Phin’s glowing bedroom control center — dark screens, code rain, cyberpunk lighting. Professor kneels, offering a golden router and signed contract: “Unlimited Internet + Partnership Rights.” Cats perched like advisors.</p>',
+			typedCaptions: [
+				'Cornered, Pauls surrenders.',
+				'Phin gains power — not just WiFi, but the keys to the empire.'
 			],
 		},
 	]);
