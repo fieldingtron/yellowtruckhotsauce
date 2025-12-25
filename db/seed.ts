@@ -39,6 +39,16 @@ export default async function seed() {
 			slug: 'john',
 			title: 'Midshipman Marshall & The Space Monkey',
 			summary: 'The story of an unexpected visitor from the stars.',
+		},
+		{
+			slug: 'ginny',
+			title: 'Virginia & The Scarlet Letter… of Perfume',
+			summary: 'A 10-Panel Romantic Comic with Monkeys, Midshipmen & Mischief.',
+		},
+		{
+			slug: 'ruta',
+			title: 'Pauls the Story Seller & Ruta the Latvian Sudoku Mom',
+			summary: 'A story of puzzles, publishing, and the power of a space monkey.',
 		}
 	]);
 
@@ -699,5 +709,227 @@ export default async function seed() {
 			typedCaptions: ['The mission was over.', 'Marshall: "If I ever have a son, I am going to call him Fielding."'],
 			imagePrompt: "A helicopter has arrived to take the monkey. The monkey (Fielding), in his silver suit with nametag 'FIELDING', is looking back, saluting with a tiny hand while clutching a mission patch. Marshall (john.jpg) stands on deck saluting back. A banana peel is left on the deck near Marshall's feet. Poignant farewell. "
 		},
+		// Ginny's Story - Panel 1
+		{
+			storySlug: 'ginny',
+			order: 1,
+			imageUrl: '/ginny_panel_1.jpg',
+			fullStory: 'Virginia had a crush — the respectable Midshipman Marshall, hero of the Space Monkey rescue.',
+			typedCaptions: [
+				'Virginia had a crush.',
+				'The respectable Midshipman Marshall, hero of the Space Monkey rescue.'
+			],
+			imagePrompt: "Virginia (ginny.jpg) sits at her desk with a dreamy expression, quill in hand, doodling 'JM' in the margins of a notebook. She is a woman in her 20s. The setting is light historical with era-drama flair.  "
+		},
+		// Ginny's Story - Panel 2
+		{
+			storySlug: 'ginny',
+			order: 2,
+			imageUrl: '/ginny_panel_2.jpg',
+			fullStory: 'Brooke advises Virginia from her bed, suggesting she be more mysterious and sophisticated.',
+			typedCaptions: [
+				'Brooke: "Don’t be too nice. Boys love mystery."',
+				'Virginia: "But I like him."',
+				'Brooke: "Exactly the problem."'
+			],
+			imagePrompt: "Brooke (a friend, woman in her 20s, stylish and confident) is sprawled on a bed, painting her nails. She is looking at Virginia with an encouraging smirk. Virginia (ginny.jpg) is sitting nearby. Brooke is gesturing as if giving bold advice, encouraging the perfumed letter plan. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ginny',
+			order: 3,
+			imageUrl: '/ginny_panel_3.jpg',
+			fullStory: 'Inspired by old literature, Virginia crafts a scarlet invitation — sealed with perfume and her new-found courage.',
+			typedCaptions: [
+				'Inspired by old literature, she crafts a scarlet invitation.',
+				'Sealed with perfume and courage.'
+			],
+			imagePrompt: "Virginia (ginny.jpg) holds a piece of fancy red stationery next to a perfume bottle. She looks determined. She is writing elegantly on the red paper. Close up on her hands and the letter. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ginny',
+			order: 4,
+			imageUrl: '/ginny_panel_4.jpg',
+			fullStory: 'Heart racing with a mix of regret and hope, Virginia delivers the perfumed red letter to Midshipman Marshall.',
+			typedCaptions: [
+				'She sends it — heart racing, regretting and hoping all at once.'
+			],
+			imagePrompt: "Virginia (ginny.jpg) slides the red letter with a wax seal into a naval inbox. She looks nervous but excited. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ginny',
+			order: 5,
+			imageUrl: '/ginny_panel_5.jpg',
+			fullStory: 'Meanwhile, Marshall is busy preparing for another meeting with his new friend, Fielding the Space Monkey.',
+			typedCaptions: [
+				'Marshall had other plans — a lesson with Fielding the monkey.',
+				'Now learning ASL one banana at a time.'
+			],
+			imagePrompt: "Transition panel. The text 'MEANWHILE...' is written in a classic comic font in a small box. Midshipman Marshall (john.jpg, john2.jpg) is packing a bag with bananas and flashcards. He looks happy and focused. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ginny',
+			order: 6,
+			imageUrl: '/ginny_panel_6.jpg',
+			fullStory: 'The perfumed letter arrives, causing quite a stir among the curious sailors and a blushing Midshipman Marshall.',
+			typedCaptions: [
+				'Sailor: “Ooooh, someone’s admired!”',
+				'Marshall: “It smells like roses… and decisions.”'
+			],
+			imagePrompt: "Midshipman Marshall (john.jpg) holds the red, perfumed letter. Pink hearts or scent lines faintly rise from it. A sailor in the background is whistling teasingly. Marshall is blushing. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ginny',
+			order: 7,
+			imageUrl: '/ginny_panel_7.jpg',
+			fullStory: 'Marshall faces a tough choice: his duty and the monkey, or a night of romance at the Winter Ball.',
+			typedCaptions: [
+				'“Fielding can learn ‘banana’ tomorrow. Tonight… I’ll learn ‘romance.’”'
+			],
+			imagePrompt: "Marshall (john.jpg) stares at a wall calendar where 'TONIGHT!' is written on the date for the Winter Ball. He puts down the bag of bananas thoughtfully. He is smiling and adjusting his uniform collar in a mirror. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ginny',
+			order: 8,
+			imageUrl: '/ginny_panel_8.jpg',
+			fullStory: 'Virginia glows with happiness as Marshall greets her at the Winter Ball with a formal naval bow.',
+			typedCaptions: [
+				'Marshall: “Your letter was… unforgettable.”',
+				'Virginia: “I hoped so.”'
+			],
+			imagePrompt: "A beautiful winter ball entrance with snow falling outside. Marshall (john.jpg) in full dress uniform greets Virginia (ginny.jpg), who looks stunning in a formal dress. He bows to her. They are smiling. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ginny',
+			order: 9,
+			imageUrl: '/ginny_panel_9.jpg',
+			fullStory: 'The pair connect deeply while dancing, sharing stories of space monkeys and brave rescues.',
+			typedCaptions: [
+				'She loved his bravery. He loved her kindness.',
+				'And both loved the monkey story.'
+			],
+			imagePrompt: "Marshall (john.jpg) and Virginia (ginny.jpg) are dancing together. Marshall is talking animatedly, and Virginia is laughing with admiration. Romantic atmosphere. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ginny',
+			order: 10,
+			imageUrl: '/ginny_panel_10.jpg',
+			fullStory: 'Under the glow of lanterns, the dance leads to new possibilities and a unique chaperone.',
+			typedCaptions: [
+				'Virginia: “I’d like to meet Fielding someday.”',
+				'Marshall: “He’d like you. He trusts good people.”',
+				'The scarlet letter led not to shame — but to possibility.'
+			],
+			imagePrompt: "Walking home under lanterns after the dance. Virginia (ginny.jpg) holds a banana that Marshall brought. In the background, a silhouette of Fielding the space monkey sits on a fence, watching them like a chaperone. Marshall and Virginia look happy. NO SPEECH BUBBLES. "
+		},
+		// Ruta's Story - Panel 1
+		{
+			storySlug: 'ruta',
+			order: 1,
+			imageUrl: '/ruta_panel_1.jpg',
+			fullStory: 'Ruta solved puzzles. Pauls solved stories. Their house hummed with quiet creation.',
+			typedCaptions: [
+				'Ruta solved puzzles.',
+				'Pauls solved stories.',
+				'Their house hummed with quiet creation.'
+			],
+			imagePrompt: "Kitchen table at night. Ruta (ruta2.jpg, depict her much younger, in her 30s, mid-length hair) sits solving a puzzle grid with a coffee. Pauls (depict as a 10-year-old boy, facial structure and eyes of pauls2.jpg, NORMAL BROWN HAIR) is sitting across from her, drawing intensely in a notebook. On the wall in the background, a small Latvian flag. Nostalgic family home setting. NO SPEECH BUBBLES. "
+		},
+		// Ruta's Story - Panel 2
+		{
+			storySlug: 'ruta',
+			order: 2,
+			imageUrl: '/ruta_panel_2.jpg',
+			fullStory: 'Pauls announces his plan to sell his newly written manuscript, "Midshipman Marshall & The Space Monkey."',
+			typedCaptions: [
+				'Pauls: “I’m gonna sell it.”',
+				'Ruta: “Why not? Boldness is good.”'
+			],
+			imagePrompt: "Interior shot. Pauls (10-year-old boy, pauls2.jpg facial structure, NORMAL BROWN HAIR) proudly holds up a handmade booklet. On the cover, the title 'Midshipman Marshall and his monkey Fielding' is clearly written in charming kid-like handwriting, alongside a drawing of a rocket and monkey. Ruta (ruta2.jpg, younger version) is looking at him with a supportive, bold expression. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ruta',
+			order: 3,
+			imageUrl: '/ruta_panel_3.jpg',
+			fullStory: 'Long drives were their brainstorming studio. Ruta drove while Pauls narrated grand adventures.',
+			typedCaptions: [
+				'Long drives were their brainstorming studio.'
+			],
+			imagePrompt: "Scenic back roads. Ruta (younger, ruta2.jpg) is driving an older car. Pauls (age 10, pauls2.jpg structure, NORMAL BROWN HAIR) in the passenger seat narrated ideas. Ruta stops at a turnout, looking at a paper puzzle. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ruta',
+			order: 4,
+			imageUrl: '/ruta_panel_4.jpg',
+			fullStory: 'The kitchen became a publishing house. Pauls made the books, and Ruta conquered her puzzles.',
+			typedCaptions: [
+				'He made copies. She cracked puzzles.',
+				'A good pair.'
+			],
+			imagePrompt: "Kitchen table covered in stacks of paper. Pauls (age 10, NORMAL BROWN HAIR) is busy making 'books'. Ruta (ruta2.jpg, younger) flips a completed puzzle page triumphantly. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ruta',
+			order: 5,
+			imageUrl: '/ruta_panel_5.jpg',
+			fullStory: 'First try — no sale. A plot twist.',
+			typedCaptions: [
+				'First try — no sale.',
+				'A plot twist.'
+			],
+			imagePrompt: "Suburban street. Pauls (age 10, NORMAL BROWN HAIR) knocks on a front door. Neighbor is shaking their head. Ruta (ruta2.jpg, younger) stands behind him, giving a thumbs-up. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ruta',
+			order: 6,
+			imageUrl: '/ruta_panel_6.jpg',
+			fullStory: 'A hero is made — one dollar at a time.',
+			typedCaptions: [
+				'A hero is made — one dollar at a time.'
+			],
+			imagePrompt: "Another house. Pauls (age 10, NORMAL BROWN HAIR) is speaking confidently. A neighbor laughs and buys a book. Pauls looks like a hero. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ruta',
+			order: 7,
+			imageUrl: '/ruta_panel_7.jpg',
+			fullStory: 'Soon half the street met Midshipman Marshall.',
+			typedCaptions: [
+				'Soon half the street met Midshipman Marshall.'
+			],
+			imagePrompt: "Sidewalk street booth. A sign on the booth says 'STORIES $1'. Other kids are reading illustrated booklets where the title 'Midshipman Marshall and his monkey Fielding' is visible on the covers. Ruta (ruta2.jpg, younger) is sitting in a folding chair solving a puzzle. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ruta',
+			order: 8,
+			imageUrl: '/ruta_panel_8.jpg',
+			fullStory: 'Success feels like fresh air, ja?',
+			typedCaptions: [
+				'Success feels like fresh air, ja?',
+				'I’m writing Book Two.'
+			],
+			imagePrompt: "Interior of the car at sunset. Pauls (age 10, NORMAL BROWN HAIR) is counting coins. Ruta (ruta2.jpg, younger) is humming while driving. Warm sunset glow. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ruta',
+			order: 9,
+			imageUrl: '/ruta_panel_9.jpg',
+			fullStory: 'All puzzles get solved. You’ll see.',
+			typedCaptions: [
+				'Pauls: “Stuck?”',
+				'Ruta: “All puzzles get solved. You’ll see.”'
+			],
+			imagePrompt: "Back home at night. Pauls (age 10, NORMAL BROWN HAIR) sketching monkeys. Ruta (ruta2.jpg, younger) tackling a puzzle with a pencil in her mouth. NO SPEECH BUBBLES. "
+		},
+		{
+			storySlug: 'ruta',
+			order: 10,
+			imageUrl: '/ruta_panel_10.jpg',
+			fullStory: 'Together — they build stories piece by piece, mile by mile.',
+			typedCaptions: [
+				'She solves numbers. He solves words.',
+				'Together — they build stories piece by piece, mile by mile.'
+			],
+			imagePrompt: "Wide shot. Ruta (ruta2.jpg, younger) fills in the last square. Pauls (age 10, NORMAL BROWN HAIR) finished his story. They share a knowing, proud smile. NO SPEECH BUBBLES. "
+		}
 	]);
 }
